@@ -136,8 +136,10 @@ alias yy=yy
 # Created by `pipx` on 2024-07-15 17:23:01
 export PATH="$PATH:/home/dev/.local/bin"
 
-# bun completions
-[ -s "/home/dev/.local/share/reflex/bun/_bun" ] && source "/home/dev/.local/share/reflex/bun/_bun"
+# bun completions (optional)
+if [ -s "$HOME/.local/share/reflex/bun/_bun" ]; then
+  source "$HOME/.local/share/reflex/bun/_bun"
+fi
 
 # bun
 export BUN_INSTALL="$HOME/.local/share/reflex/bun"
